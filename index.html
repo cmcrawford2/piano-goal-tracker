@@ -19,6 +19,24 @@
         </label>
         <button onclick="resetKeys()">Reset</button>
       </div>
+      <!-- The modal container -->
+      <div id="resetModal" class="modal">
+        <form id="resetForm" class="modal-content">
+          <h2>Reset Confirmation</h2>
+          <label for="resetColors">
+            <input type="checkbox" id="resetColors" name="resetColors" />
+            Reset Colors
+          </label>
+          <label for="resetText">
+            <input type="checkbox" id="resetText" name="resetText" />
+            Reset Text
+          </label>
+          <div class="modal-buttons">
+            <button type="button" id="cancelReset">Cancel</button>
+            <button type="submit" id="confirmReset">Reset</button>
+          </div>
+        </form>
+      </div>
     </header>
     <div id="piano">
       <img

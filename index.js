@@ -95,19 +95,54 @@ textInputs.forEach((input) => {
   input.addEventListener("keypress", rotateKeyText);
 });
 
-/* Function to reset all the keys */
-/* TODO: put up a window letting the user choose which things to reset, or cancel. */
+/* Functions to reset key data */
 
 function resetKeys() {
-  const keys = document.querySelectorAll(".key");
-  keys.forEach((key) => {
-    key.style.backgroundColor = "white";
-    keyText = key.querySelector(".key-text");
-    keyText.textContent = "";
-    localStorage.removeItem(`${key.id}-color`);
-    localStorage.removeItem(`${key.id}-text`);
-  });
+  // Put up the hidden menu to make sure the user wants a reset.
+  modal.classList.add("show");
 }
+
+const modal = document.getElementById("resetModal");
+
+const resetForm = document.getElementById("resetForm");
+const cancelResetBtn = document.getElementById("cancelReset");
+const confirmResetBtn = document.getElementById("confirmReset");
+
+resetForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const resetColors = document.getElementById("resetColors").checked;
+  const resetText = document.getElementById("resetText").checked;
+
+  const keys = document.querySelectorAll(".key");
+
+  if (resetColors) {
+    keys.forEach((key) => {
+      key.style.backgroundColor = "white";
+      localStorage.removeItem(`${key.id}-color`);
+    });
+  }
+
+  if (resetText) {
+    keys.forEach((key) => {
+      keyText = key.querySelector(".key-text");
+      keyText.textContent = "";
+      localStorage.removeItem(`${key.id}-text`);
+    });
+  }
+
+  closeModal();
+});
+
+function closeModal() {
+  document.getElementById("resetColors").checked = false;
+  document.getElementById("resetText").checked = false;
+  modal.classList.remove("show");
+}
+
+cancelResetBtn.addEventListener("click", function () {
+  closeModal();
+});
 
 /* Function to hide some of the keys for mobile and tablet */
 /* as defined in styles.css by setting the variable --key-number */
