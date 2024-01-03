@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Piano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Piano goal tracker:
+        <span>Enter steps for goals by clicking on dots.</span>
+      </h1>
+      <div class="color-instructions">
+        <label for="colorPicker">
+          When a step is done, pick a color, then click on a key:
+          <input type="color" id="colorPicker" />
+        </label>
+        <button onclick="resetKeys()">Reset</button>
+      </div>
+    </header>
+    <div id="piano">
+      <img
+        class="logo"
+        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+        alt="freeCodeCamp Logo"
+      />
+      <div class="keys">
+        <div id="key1" class="key">
+          <div class="key-btn" onclick="toggleTextBox('textBox1')"></div>
+          <input
+            type="text"
+            id="textBox1"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key2" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox2')"></div>
+          <input
+            type="text"
+            id="textBox2"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key3" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox3')"></div>
+          <input
+            type="text"
+            id="textBox3"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key4" class="key">
+          <div class="key-btn" onclick="toggleTextBox('textBox4')"></div>
+          <input
+            type="text"
+            id="textBox4"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key5" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox5')"></div>
+          <input
+            type="text"
+            id="textBox5"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key6" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox6')"></div>
+          <input
+            type="text"
+            id="textBox6"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key7" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox7')"></div>
+          <input
+            type="text"
+            id="textBox7"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key8" class="key">
+          <div class="key-btn" onclick="toggleTextBox('textBox8')"></div>
+          <input
+            type="text"
+            id="textBox8"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key9" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox9')"></div>
+          <input
+            type="text"
+            id="textBox9"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key10" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox10')"></div>
+          <input
+            type="text"
+            id="textBox10"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key11" class="key">
+          <div class="key-btn" onclick="toggleTextBox('textBox11')"></div>
+          <input
+            type="text"
+            id="textBox11"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key12" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox12')"></div>
+          <input
+            type="text"
+            id="textBox12"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key13" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox13')"></div>
+          <input
+            type="text"
+            id="textBox13"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key14" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox14')"></div>
+          <input
+            type="text"
+            id="textBox14"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key15" class="key">
+          <div class="key-btn" onclick="toggleTextBox('textBox15')"></div>
+          <input
+            type="text"
+            id="textBox15"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key16" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox16')"></div>
+          <input
+            type="text"
+            id="textBox16"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key17" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox17')"></div>
+          <input
+            type="text"
+            id="textBox17"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key18" class="key">
+          <div class="key-btn" onclick="toggleTextBox('textBox18')"></div>
+          <input
+            type="text"
+            id="textBox18"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key19" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox19')"></div>
+          <input
+            type="text"
+            id="textBox19"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key20" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox20')"></div>
+          <input
+            type="text"
+            id="textBox20"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+        <div id="key21" class="key black--key">
+          <div class="key-btn" onclick="toggleTextBox('textBox21')"></div>
+          <input
+            type="text"
+            id="textBox21"
+            class="text-box"
+            placeholder="Type text and press Enter"
+          />
+          <div class="key-text"></div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

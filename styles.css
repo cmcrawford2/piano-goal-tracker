@@ -1,0 +1,153 @@
+:root {
+  --key-number: 21;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+h1 span {
+  font-weight: normal;
+}
+
+.color-instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-block: 24px;
+}
+
+header button {
+  height: 32px;
+}
+
+@supports (-moz-appearance: none) {
+  button {
+    margin-bottom: 6px;
+  }
+}
+
+header input {
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+
+#piano {
+  position: relative;
+  background-color: #00471b;
+  width: 992px;
+  height: 290px;
+  margin: 40px auto;
+  /* The padding positions the keys */
+  padding: 90px 20px 0 20px;
+  border-radius: 10px;
+}
+
+.logo {
+  position: absolute;
+  width: 200px;
+  top: 23px;
+}
+
+.keys {
+  background-color: #040404;
+  width: 949px;
+  height: 180px;
+  padding-left: 2px;
+}
+
+.key {
+  position: relative;
+  background-color: #ffffff;
+  width: 41px;
+  height: 175px;
+  margin: 2px;
+  float: left;
+  border-radius: 0 0 3px 3px;
+}
+
+.key.black--key::after {
+  position: absolute;
+  background-color: #1d1e22;
+  content: "";
+  left: -18px;
+  width: 32px;
+  height: 100px;
+  border-radius: 0 0 3px 3px;
+}
+
+.key-btn {
+  position: absolute;
+  top: 210px;
+  left: 8px;
+  height: 25px;
+  width: 25px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.text-box {
+  display: none;
+  position: absolute;
+  top: 240px;
+  left: 8px;
+}
+
+.key-text {
+  position: absolute;
+  white-space: nowrap;
+  transform-origin: top left;
+  transform: rotate(90deg) translateX(250px) translateY(-30px);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --key-number: 7;
+  }
+  #piano {
+    width: 358px;
+  }
+  .keys {
+    width: 318px;
+  }
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  :root {
+    --key-number: 14;
+  }
+  #piano {
+    width: 675px;
+  }
+  .keys {
+    width: 633px;
+  }
+}
