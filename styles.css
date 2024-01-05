@@ -21,13 +21,17 @@ p {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 h1 span {
   font-weight: normal;
+}
+
+#menu {
+  margin: 10px;
 }
 
 .color-instructions {
@@ -35,8 +39,8 @@ h1 span {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-size: 24px;
-  margin-block: 24px;
+  font-size: 20px;
+  margin-block: 20px;
 }
 
 header button {
